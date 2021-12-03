@@ -1,0 +1,60 @@
+{% load static %}
+<!-- footer section starts  -->
+
+   <section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3><i class="fas fa-shopping-basket"></i>OLF</h3>
+            <h4>Mission<h4>
+            <p>To provide long-lasting furniture that our customers use with joy</p>
+
+            <h4>Vision</h4>
+            <p>To become world-class company that supplies quality furnitures all around the world</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +234 908-008-3719</a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +234 815-476-4285 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> OLF@gmail.com</a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Branch: Abeokuta, Ogun State </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>HeadQuarters: Ikeja, Lagos</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+            <a href="{% url 'product-list' %}" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+            <a href="{% url 'category-list' %}" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+            <a href="{% url 'blog' %}" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="{% url 'blog' %}" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+            <a href="{% url 'blog' %}" class="links"> <i class="fas fa-arrow-right"></i> about us </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <form method='POST'>
+               {% csrf_token %}
+            <input type="email" placeholder="your email" class="email", name='newsletter'>
+            <input type="submit" value="subscribe" class="btn">
+            </form>
+            <img src={% static "image/payment.png"%} class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span>SolsMedia </span> | all rights reserved </div>
+
+   </section>
+
+<!-- footer section ends -->

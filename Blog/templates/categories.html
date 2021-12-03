@@ -1,0 +1,21 @@
+{% load static %}
+<section class="categories" id="categories">
+
+    <h1 class="heading"> Furniture <a href={%url 'category-list' %}><span>categories</span></a> </h1>
+
+    <div class="box-container">
+       {% for cat in category %}
+        <div class="box">
+           <a href={{cat.image.url}}> <img src={{cat.image.url}} alt=""></a>
+            <h3>{{cat.name}}</h3>
+            <p>upto {{cat.discount }}% off</p>
+            <a href="{{cat.get_absolute_url }}" class="btn">shop now</a>
+        </div>
+      {% endfor %}
+       
+
+    </div>
+
+</section>
+
+<!-- categories section ends -->

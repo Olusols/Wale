@@ -1,0 +1,28 @@
+{% load static %}
+<!-- blogs section starts  -->
+
+<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+      {% for post in post%}
+        <div class="box">
+            <a href={{post.image.url}}><img src={{post.image.url}} alt=""></a>
+            <div class="content">
+                <div class="icons">
+                    <a href="#"> <i class="fas fa-user"></i> by {{post.author}} </a>
+                    <a href="#"> <i class="fas fa-calendar"></i> {{post.date_added}} </a>
+                </div>
+                <h3>{{ post.title}}</h3>
+                <p>{{ post.description }}</p>
+                <a href="{{post.get_absolute_url}}" class="btn">read more</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- blogs section ends -->

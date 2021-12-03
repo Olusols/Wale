@@ -1,0 +1,18 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+  <!-- categories section starts  -->
+  {% include 'slider/index.html' %}
+  {% include 'features.html' %}
+
+{% include 'categories.html' %}
+{% include 'product.html' %}
+{% include 'review.html' %}
+
+{% include 'stories.html' %}
+
+  {% endblock content %}

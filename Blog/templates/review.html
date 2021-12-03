@@ -1,0 +1,33 @@
+{% load static %}
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's <span>review</span> </h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+           {% for review in review %}
+            <div class="swiper-slide box">
+                <img src={{review.image.url}} alt="">
+                <p>{{review.review}}</p>
+                <h3>{{review.fullname}}</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+          {% endfor %}
+          
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->

@@ -1,0 +1,68 @@
+{% load static %}
+    
+{% block css %}
+	<link rel="stylesheet" type="text/css" href={% static "css/style.css"%}>
+{% endblock css %}
+
+
+ 
+  <section class="home">
+     <div class="slider">
+        <div class="slide active" style="background-image: url('/static/image/chair.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>Get your business online</h1>
+                    <p>We are here for you.</p>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('/static/image/Chairs.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>The world is now digital</h1>
+                    <p>Let's get insight fro your data.<h5>Ok</h5></p>
+                    
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('static/image/chair.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>We can't wait to help you grow your business.</h1>
+                    <p>Get online presence</p>
+                    <a href="">MEET A DATA SCIENTIST</a>
+                </div>
+            </div>
+        </div>
+               <div class="slide" style="background-image: url('static/image/Kitchen.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>Be relevant in business</h1>
+                    <p>We live in a generation where algorithms run everything. Let's help you generate insigts fro your data</p>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+        </div>
+     </div>
+   
+    <!-- controls  -->
+    <div class="controls">
+        <div class="prev"><</div>
+        <div class="next">></div>
+    </div>
+
+    <!-- indicators -->
+    <div class="indicator">
+    </div>
+
+  </section>
+
+{% block js%}
+  
+{% endblock %}
+
+
+
+
