@@ -9,8 +9,8 @@ class Categories(models.Model):
     image = models.ImageField(upload_to='category/')
     discount = models.IntegerField()
     date_added = models.DateTimeField(
-        auto_now_add=True, null=True)
-    slug = models.SlugField(default='categories')
+        auto_now_add=True)
+    slug = models.SlugField()
 
     class Meta:
         ordering = ['-date_added']
@@ -30,8 +30,8 @@ class Post(models.Model):
     tags = models.CharField(max_length=255)
     date_added = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='post/', null=True)
-    slug = models.SlugField(max_length=255, default='It-is-here')
+    image = models.ImageField(upload_to='post/')
+    slug = models.SlugField(max_length=255)
 
     class Meta:
         ordering = ['-date_added']
